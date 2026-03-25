@@ -20,7 +20,14 @@ load_dotenv()
 app = FastAPI(title="AI Clone API", version="4.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+    "http://localhost:5173",
+    "http://13.61.34.71:8000",
+    "https://devadarsh.xyz",
+    "https://www.devadarsh.xyz",
+    "https://api.devadarsh.xyz",   # if needed
+    "https://your-netlify-site.netlify.app",  # keep for now
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
